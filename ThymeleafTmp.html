@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" th:href="@{test.css}"/>
+        <title>SGW Template</title>
+		<style  type="text/css">
+	.h11 {
+	text-align: center;
+	text-decoration: underline;
+    color: #DDA0DD;
+	
+    font-family: verdana;
+    font-size: 300%;
+	background-color: #A10684;
+}
+
+.p1{
+color: red;
+ 
+ margin-bottom: 3cm;
+}
+h2{
+color: #00FF00;
+}
+.caption {
+	font-size: 140%;
+	font-weight: bold;
+}
+
+
+.tab{
+ margin-bottom: 3cm;
+}
+	</style>
+    </head>   
+        <body>
+	<img class="logoth" th:src="@{${fislogo}}" width="130px" height="50px"/>
+        <h1 class="h11">SGW Performance</h1>
+		<h2>[[${test_type1}]]</h2>
+		<h3> This test case covers the scenario of reading trades coming from CCP in offline mode. The SGW is only
+reading trades and sending it to the downstream client.</h3>
+		<h3>LBelow chart represents number of messages per second for trade reading by SGW</h3>
+		<img th:src="@{${image1}}" width="700px" height="750px"/> 
+		
+        <p class="p1">[[${interpretation1}]]</p>
+
+<p>Table below shows statistics captured as part of Trade reading scenario</p>
+		<table class="tab" style="width:100%" border="1">
+		<caption class="caption">StreamGateway Performance Statics</caption>
+  <tr>
+    <th class="th1" style="text-align:center" >MAX</th>
+    <th style="text-align:center">[[${max1}]]</th> 
+  </tr>
+  <tr>
+    <th style="text-align:center">MIN</th>
+    <th style="text-align:center">[[${min1}]]</th>
+  </tr>
+  <tr>
+    <th style="text-align:center">AVERAGE</th>
+    <th style="text-align:center">[[${avr1}]]</th>
+  </tr>
+  
+</table>
+
+
+	<p style="page-break-after: always;">&nbsp;</p> 
+
+<h2>[[${test_type2}]]</h2>
+	<h3> This test case covers the scenario of processing an operation request coming from a downstream client.</h3>
+		<h3>Below chart represents number of messages per second for processing operation request by SGW.</h3>
+		<img th:src="@{${image2}}" width="700px" height="750px"/> 
+		
+        <p > StreamGateway performance is above the normal threshold which is  40 trades processed per second"</p>
+				
+				
+<p>Table below shows statistics captured as part of processing operation request scenario.</p>
+				<p>Table below shows statistics captured as part of Trade reading scenario</p>
+		<table style="width:100%" border="1">
+		<caption class="caption">StreamGateway Performance Statics</caption>
+  <tr>
+    <th class="th1" style="text-align:center" >MAX</th>
+    <th style="text-align:center">[[${max2}]]</th> 
+  </tr>
+  <tr>
+    <th style="text-align:center">MIN</th>
+    <th style="text-align:center">[[${min2}]]</th>
+  </tr>
+  <tr>
+    <th style="text-align:center">AVERAGE</th>
+    <th style="text-align:center">[[${avr2}]]</th>
+  </tr>
+  
+</table>
+
+	<p style="page-break-after: always;">&nbsp;</p> 
+
+<h2>[[${test_type3}]]</h2>
+	<h3> TThis test case covers the scenario of processing clearing confirmations from the CCP. We receive only one
+message by one clearing confirmation.</h3>
+		<h3>Below chart represents number of messages per second  for processing clearing confirmation by SGW.</h3>
+		<img th:src="@{${image3}}" width="700px" height="750px"/> 
+		
+        <p class="p1">StreamGateway performance is low. she is below the normal
+threshold which is 50 trades processed per second</p>
+<p>Table below shows statistics captured as part of Trade reading scenario</p>
+		<table style="width:100%" border="1">
+		<caption class="caption">StreamGateway Performance Statics</caption>
+  <tr>
+    <th class="th1" style="text-align:center" >MAX</th>
+    <th style="text-align:center">[[${max3}]]</th> 
+  </tr>
+  <tr>
+    <th style="text-align:center">MIN</th>
+    <th style="text-align:center">[[${min3}]]</th>
+  </tr>
+  <tr>
+    <th style="text-align:center">AVERAGE</th>
+    <th style="text-align:center">[[${avr3}]]</th>
+  </tr>
+  
+</table>
+    </body>
+	
+</html>
+
+
+
+
